@@ -29,7 +29,7 @@ class BMI_calculator(QWidget):
         self.calcButton.clicked.connect(self.calculateAndDislpay)
         layout.addWidget(self.calcButton)
 
-        #set resutl of bmi calculation
+        #set result of bmi calculation
         self.resultLabel = QLabel("")
         layout.addWidget(self.resultLabel)
 
