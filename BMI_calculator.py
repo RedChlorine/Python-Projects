@@ -2,6 +2,7 @@
 #this class is used to calculate the BMI of a user - backend for now
 import sys
 from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QLineEdit, QLabel, QMessageBox
+from PySide6.QtCore import QSize
 
 class BMI_calculator(QWidget):
     def __init__(self):
@@ -29,13 +30,14 @@ class BMI_calculator(QWidget):
         self.calcButton.clicked.connect(self.calculateAndDislpay)
         layout.addWidget(self.calcButton)
 
-        #set result of bmi calculation
+        #set resutl of bmi calculation
         self.resultLabel = QLabel("")
         layout.addWidget(self.resultLabel)
 
         #set the above layout to the window and set window title
         self.setLayout(layout)
         self.setWindowTitle("BMI Calculator")
+        self.resize(QSize(250,150))
 
     def calculateAndDislpay(self):
         try:
